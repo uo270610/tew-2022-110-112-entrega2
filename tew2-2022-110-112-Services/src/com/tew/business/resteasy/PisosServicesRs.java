@@ -31,6 +31,6 @@ public interface PisosServicesRs extends PisoService{
 
 	@POST
 	@Consumes({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
-	void updateAlumno(Piso piso) throws NotPersistedException;
+	void updatePiso(Piso piso) throws NotPersistedException;
 
 }
