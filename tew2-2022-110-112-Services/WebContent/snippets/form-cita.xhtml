@@ -1,0 +1,54 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core">
+	<h:panelGrid id="Grid" columns="2" cellpadding="5">
+  #{msgs.tablaIdPiso} 
+  <h:panelGroup>
+			<p:inputText value="#{pisoparavisita.idPiso}" required="true"
+				requiredMessage="#{msgs.formAlta_idPiso_requiredMessage}"
+				validatorMessage="#{msgs.formAlta_idPiso_validatorMessage}"
+				id="idPiso">
+				<f:validateLength maximum="10" />
+			</p:inputText>
+			<p:message for="idPiso" />
+		</h:panelGroup>
+  
+  #{msgs.tablaIdCliente} 
+  <h:panelGroup>
+			<p:inputText value="#{pisoparavisita.idCliente}" required="true"
+				requiredMessage="#{msgs.formAlta_idCliente_requiredMessage}"
+				validatorMessage="#{msgs.formAlta_idCliente_validatorMessage}"
+				id="idCliente">
+				<f:validateLength maximum="10" />
+			</p:inputText>
+			<p:message for="idCliente" />
+		</h:panelGroup>
+  
+  #{msgs.tablaFecha}
+  <h:panelGroup>
+			<p:inputText value="#{pisoparavisita.fechaHoraCita}" required="true"
+				requiredMessage="#{msgs.formAlta_fecha_requiredMessage}"
+				validatorMessage="#{msgs.formAlta_fecha_validatorMessage}"
+				id="fechaHoraCita">
+				<f:validateLength maximum="30" />
+			</p:inputText>
+			<p:message for="fechaHoraCita" />
+		</h:panelGroup>  
+  
+  #{msgs.tablaEstado}
+  <h:panelGroup>
+			<p:inputText value="#{pisoparavisita.estado}" required="true"
+				requiredMessage="#{msgs.formAlta_estado_requiredMessage}"
+				validatorMessage="#{msgs.formAlta_estado_validatorMessage}"
+				id="estado">
+				<f:validateLength maximum="1" />
+			</p:inputText>
+			<p:message for="estado" />
+		</h:panelGroup>
+		<p:commandButton value="#{msgs.botonSalvar}" process="@form"
+			action="#{pisosParaVisitar.salva}" update="Grid">
+		</p:commandButton>
+	</h:panelGrid>
+</ui:composition>

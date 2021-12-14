@@ -1,0 +1,24 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	template="/templates/template-index.xhtml">
+	<ui:define name="titulo">
+ #{msgs.tituloIndexCliente}
+ </ui:define>
+	<ui:define name="menugeneral">
+	</ui:define>
+	<ui:define name="cuerpo">
+		<center>
+			<p:growl id="mensajes" showDetail="false" />
+				<p:commandLink value="#{msgs.gestionar_citas_travel}" action="gestion_agente_citas">
+       			</p:commandLink>
+       			<p:commandLink value="#{msgs.gestionar_pisos_travel}" action="gestion_cliente_casas">
+       			</p:commandLink>
+		</center>
+	</ui:define>
+	<ui:define name="pie">
+	<ui:include src="/snippets/pie-casa-client.xhtml" />
+	</ui:define>
+</ui:composition>

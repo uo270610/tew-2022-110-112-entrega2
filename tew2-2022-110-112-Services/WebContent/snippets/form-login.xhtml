@@ -1,0 +1,25 @@
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+	<p:panelGrid columns="2">
+		<h:panelGroup>
+			<h:outputLabel for="email" value="#{msgs.login_form_name_label}" />
+		</h:panelGroup>
+		<h:panelGroup>
+			<p:inputText id="email" value="#{login.email}" />
+			<p:message for="email" />
+		</h:panelGroup>
+		<h:panelGroup>
+			<h:outputLabel for="password"
+				value="#{msgs.login_form_password_label}" />
+		</h:panelGroup>
+		<h:panelGroup>
+			<p:password id="password" value="#{login.password}" />
+			<p:message for="password" />
+		</h:panelGroup>
+	</p:panelGrid>
+</ui:composition>

@@ -1,0 +1,65 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core">
+	<h:panelGrid id="Grid" columns="2" cellpadding="5">
+  #{msgs.nombre} 
+  <h:panelGroup>
+			<p:inputText value="#{cliente.nombre}" required="true"
+				requiredMessage="#{msgs.formAlta_nombre_requiredMessage}"
+				validatorMessage="#{msgs.formAlta_nombre_validatorMessage}"
+				id="nombre">
+				<f:validateLength maximum="20" />
+			</p:inputText>
+			<p:message for="nombre" />
+		</h:panelGroup>
+  
+  #{msgs.apellidos} 
+  <h:panelGroup>
+			<p:inputText value="#{cliente.apellidos}" required="true"
+				requiredMessage="#{msgs.formAlta_apellidos_requiredMessage}"
+				validatorMessage="#{msgs.formAlta_apellidos_validatorMessage}"
+				id="apellidos">
+				<f:validateLength maximum="40" />
+			</p:inputText>
+			<p:message for="apellidos" />
+		</h:panelGroup>
+  
+  #{msgs.contraseña}
+  <h:panelGroup>
+			<p:inputText value="#{cliente.passwd}" required="true"
+				requiredMessage="#{msgs.formAlta_passwd_requiredMessage}"
+				validatorMessage="#{msgs.formAlta_passwd_validatorMessage}"
+				id="passwd">
+				<f:validateLength maximum="10" />
+			</p:inputText>
+			<p:message for="passwd" />
+		</h:panelGroup>  
+  
+  #{msgs.correo}
+  <h:panelGroup>
+			<p:inputText value="#{cliente.email}" required="true"
+				requiredMessage="#{msgs.formAlta_correo_requiredMessage}"
+				validatorMessage="#{msgs.formAlta_correo_validatorMessage}"
+				id="email">
+				<f:validateRegex pattern=".+@.+\.[a-z]+" />
+			</p:inputText>
+			<p:message for="email" />
+		</h:panelGroup>
+		
+	  #{msgs.login}
+  <h:panelGroup>
+			<p:inputText value="#{cliente.login}" required="true"
+				requiredMessage="#{msgs.formAlta_correo_requiredMessage}"
+				validatorMessage="#{msgs.formAlta_correo_validatorMessage}"
+				id="login">
+				<f:validateRegex pattern=".+@.+\.[a-z]+" />
+			</p:inputText>
+			<p:message for="login" />
+		</h:panelGroup>
+		<p:commandButton value="#{msgs.registry_form_button_send}" process="@form"
+			action="#{clientes.salva}" update=":mensajes">
+		</p:commandButton>
+	</h:panelGrid>
+</ui:composition>

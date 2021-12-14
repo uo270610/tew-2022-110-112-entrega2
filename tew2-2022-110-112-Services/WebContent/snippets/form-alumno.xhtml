@@ -1,0 +1,64 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core">
+	<h:panelGrid id="Grid" columns="2" cellpadding="5">
+  #{msgs.tablaPrecio} 
+  <h:panelGroup>
+			<p:inputText value="#{piso.precio}" required="true"
+				requiredMessage="#{msgs.formAlta_precio_requiredMessage}"
+				validatorMessage="#{msgs.formAlta_precio_validatorMessage}"
+				id="precio">
+				<f:validateLength maximum="10" />
+			</p:inputText>
+			<p:message for="precio" />
+		</h:panelGroup>
+  
+  #{msgs.tablaDireccion} 
+  <h:panelGroup>
+			<p:inputText value="#{piso.direccion}" required="true"
+				requiredMessage="#{msgs.formAlta_direccion_requiredMessage}"
+				validatorMessage="#{msgs.formAlta_direccion_validatorMessage}"
+				id="direccion">
+				<f:validateLength maximum="40" />
+			</p:inputText>
+			<p:message for="direccion" />
+		</h:panelGroup>
+  
+  #{msgs.tablaEstado}
+  <h:panelGroup>
+			<p:inputText value="#{piso.estado}" required="true"
+				requiredMessage="#{msgs.formAlta_estado_requiredMessage}"
+				validatorMessage="#{msgs.formAlta_estado_validatorMessage}"
+				id="estado">
+				<f:validateLength maximum="1" />
+			</p:inputText>
+			<p:message for="estado" />
+		</h:panelGroup>  
+  
+  #{msgs.tablaCiudad}
+  <h:panelGroup>
+			<p:inputText value="#{piso.ciudad}" required="true"
+				requiredMessage="#{msgs.formAlta_ciudad_requiredMessage}"
+				validatorMessage="#{msgs.formAlta_ciudad_validatorMessage}"
+				id="ciudad">
+				<f:validateLength maximum="20" />
+			</p:inputText>
+			<p:message for="ciudad" />
+		</h:panelGroup>
+		  #{msgs.tablaAno}
+  <h:panelGroup>
+			<p:inputText value="#{piso.ano}" required="true"
+				requiredMessage="#{msgs.formAlta_ano_requiredMessage}"
+				validatorMessage="#{msgs.formAlta_ano_validatorMessage}"
+				id="ano">
+				<f:validateLength maximum="4" />
+			</p:inputText>
+			<p:message for="ano" />
+		</h:panelGroup>
+		<p:commandButton value="#{msgs.botonSalvar}" process="@form"
+			action="#{pisos.salva}" update="Grid">
+		</p:commandButton>
+	</h:panelGrid>
+</ui:composition>
