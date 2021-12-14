@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Ejemplo sencillo de web service con RESTEasy</title>
+ <script type="text/javascript"
+ src="/gestioneitorv4_0/rest-jsapi">
+ </script>
+
+ <script type="text/javascript">
+ function solicitarDatosAlumnos() {
+ var alumnos=PisosServicesRs.getPisos();
+ // Obtener el elemento HTML donde ir dejando el resultado
+ // del servicio
+ div = document.getElementById("contenido")
+ div.innerHTML = "";
+ for (i in alumnos) {
+ div.innerHTML += alumnos[i]["nombre"] + alumnos[i]["apellidos"] + alumnos[i]["email"] + alumnos[i]["iduser"]+"</br>";
+ }
+ }
+ </script>
+</head>
+<body>
+ <h1>Listado de alumnos</h1>
+ <div>
+ Obtener lista de alumnos
+ <INPUT TYPE="button" NAME="button" Value="Pulsa" onClick="solicitarDatosAlumnos()">
+ </div>
+ <br/>
+ <div id="contenido" style="height:90%;top:30px">
+ Resultado del servicio REST...
+ </div>
+</body>
+</html>

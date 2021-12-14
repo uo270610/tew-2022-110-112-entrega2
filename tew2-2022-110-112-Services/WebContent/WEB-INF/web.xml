@@ -31,23 +31,38 @@
   </init-param>
   <load-on-startup>1</load-on-startup>
   </servlet>
-  <!-- Regla de mapeo para todas las peticiones REST -->
-  <servlet-mapping>
-  <servlet-name>resteasy</servlet-name>
-  <url-pattern>/rs/*</url-pattern>
-  </servlet-mapping>
   
-  <servlet>
-    <servlet-name>Faces Servlet</servlet-name>
-    <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
-    <load-on-startup>1</load-on-startup>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>Faces Servlet</servlet-name>
-    <url-pattern>/faces/*</url-pattern>
-  </servlet-mapping>
-  <context-param>
-    <param-name>javax.faces.PROJECT_STAGE</param-name>
-    <param-value>Development</param-value>
-  </context-param>
+  <!-- Regla de mapeo para todas las peticiones REST -->
+	<servlet-mapping>
+		<servlet-name>resteasy</servlet-name>
+		<url-pattern>/rs/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Faces Servlet</servlet-name>
+		<servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>/faces/*</url-pattern>
+	</servlet-mapping>
+	<context-param>
+		<param-name>javax.faces.PROJECT_STAGE</param-name>
+	<param-value>Development</param-value>
+	</context-param>
+	<!--Generación de la librería Javascript para acceso a servicios Web REsteasy -->
+	<!-- Servlet que atenderá las consultas de clientes Javascript Tiene que 
+		ser cargado después del servlet restasy. -->
+	<servlet>
+		<servlet-name>resteasy-jsapi</servlet-name>
+		<servlet-class>org.jboss.resteasy.jsapi.JSAPIServlet</servlet-class>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+	<!-- Regla de mapeo para la libreria Javascript -->
+	<servlet-mapping>
+ <servlet-name>resteasy-jsapi</servlet-name>
+ <url-pattern>/rest-jsapi</url-pattern>
+ </servlet-mapping>
+	
 </web-app>
