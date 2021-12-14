@@ -14,7 +14,13 @@ public class PisosServicesRsImpl implements PisosServicesRs{
 	@Override
 	public List<Piso> getPisos() throws Exception {
 		// TODO Auto-generated method stub
-		return new PisosListado().getPisos();
+		try {
+			return new PisosListado().getPisos();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return null;
+		}
 	}
 
 	@Override
