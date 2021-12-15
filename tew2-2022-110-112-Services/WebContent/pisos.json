@@ -1,0 +1,335 @@
+[
+ {
+   "ID": 1,
+   "Precio": 291611,
+   "Direccion": "Plaza Gabino Diaz Merchan, 1",
+   "Ciudad": "Oviedo",
+   "Anyo": 1998,
+   "Estado": 3,
+   "Foto":"/album/foto1.jpg"
+ },
+ {
+   "ID": 2,
+   "Precio": 84270,
+   "Direccion": "avenida de La Tenderina, 7",
+   "Ciudad": "Oviedo",
+   "Anyo": 1982,
+   "Estado": 2,
+   "Foto":"/album/foto2.jpg"
+ },
+ {
+   "ID": 3,
+   "Precio": 274185,
+   "Direccion": "Plaza Primo Rivera, 3",
+   "Ciudad": "Oviedo",
+   "Anyo": 1972,
+   "Estado": 2,
+   "Foto":"/album/foto3.jpg"
+ },
+ {
+   "ID": 4,
+   "Precio": 106227,
+   "Direccion": "Santa Susana, 2",
+   "Ciudad": "Oviedo",
+   "Anyo": 1954,
+   "Estado": 4,
+   "Foto":"/album/foto4.jpg"
+ },
+ {
+   "ID": 5,
+   "Precio": 53601,
+   "Direccion": "San Pedro Mestallon, 3",
+   "Ciudad": "Oviedo",
+   "Anyo": 1992,
+   "Estado": 5,
+   "Foto":"/album/foto5.jpg"
+ },
+ {
+   "ID": 6,
+   "Precio": 487812,
+   "Direccion": "Carretera de La Costa, 110",
+   "Ciudad": "Gijon",
+   "Anyo": 2010,
+   "Estado": 5,
+   "Foto":"/album/foto6.jpg"
+ },
+ {
+   "ID": 7,
+   "Precio": 261888,
+   "Direccion": "avenida Schultz, 95",
+   "Ciudad": "Gijon",
+   "Anyo": 1978,
+   "Estado": 4,
+   "Foto":"/album/foto7.jpg"
+ },
+ {
+   "ID": 8,
+   "Precio": 327489,
+   "Direccion": "avenida del Llano, 30",
+   "Ciudad": "Gijon",
+   "Anyo": 1999,
+   "Estado": 3,
+   "Foto":"/album/foto8.jpg"
+ },
+ {
+   "ID": 9,
+   "Precio": 67689,
+   "Direccion": "Plaza del Carmen, 2",
+   "Ciudad": "Gijon",
+   "Anyo": 2005,
+   "Estado": 3,
+   "Foto":"/album/foto9.jpg"
+ },
+ {
+   "ID": 10,
+   "Precio": 352115,
+   "Direccion": "Corrida, 5",
+   "Ciudad": "Gijon",
+   "Anyo": 1977,
+   "Estado": 2,
+   "Foto":"/album/foto10.jpg"
+ },
+ {
+   "ID": 11,
+   "Precio": 372214,
+   "Direccion": "Corrida, 5 Entreplanta",
+   "Ciudad": "Gijon",
+   "Anyo": 1954,
+   "Estado": 2,
+   "Foto":"/album/foto11.jpg"
+ },
+ {
+   "ID": 12,
+   "Precio": 390715,
+   "Direccion": "Plaza del Carmen, 2",
+   "Ciudad": "Gijon",
+   "Anyo": 2006,
+   "Estado": 3,
+   "Foto":"/album/foto12.jpg"
+ },
+ {
+   "ID": 13,
+   "Precio": 263032,
+   "Direccion": "Uria, 34",
+   "Ciudad": "Gijon",
+   "Anyo": 1983,
+   "Estado": 5,
+   "Foto":"/album/foto13.jpg"
+ },
+ {
+   "ID": 14,
+   "Precio": 449565,
+   "Direccion": "avenida constitucion, 64",
+   "Ciudad": "Gijon",
+   "Anyo": 1959,
+   "Estado": 3,
+   "Foto":"/album/foto14.jpg"
+ },
+ {
+   "ID": 15,
+   "Precio": 67452,
+   "Direccion": "Camara, 33",
+   "Ciudad": "aviles",
+   "Anyo": 1976,
+   "Estado": 1,
+   "Foto":"/album/foto15.jpg"
+ },
+ {
+   "ID": 16,
+   "Precio": 448391,
+   "Direccion": "Francisco Legorburu, 6",
+   "Ciudad": "aviles",
+   "Anyo": 2016,
+   "Estado": 1,
+   "Foto":"/album/foto16.jpg"
+ },
+ {
+   "ID": 17,
+   "Precio": 253116,
+   "Direccion": "Leon Y Escosura, 3",
+   "Ciudad": "Oviedo",
+   "Anyo": 1972,
+   "Estado": 1,
+   "Foto":"/album/foto17.jpg"
+ },
+ {
+   "ID": 18,
+   "Precio": 54482,
+   "Direccion": "Plaza de Cuatro Caños, 8 Bajo",
+   "Ciudad": "Oviedo",
+   "Anyo": 1952,
+   "Estado": 4,
+   "Foto":"/album/foto18.jpg"
+ },
+ {
+   "ID": 19,
+   "Precio": 184286,
+   "Direccion": "Mendizabal, 1",
+   "Ciudad": "Oviedo",
+   "Anyo": 1991,
+   "Estado": 1,
+   "Foto":"/album/foto19.jpg"
+ },
+ {
+   "ID": 20,
+   "Precio": 489822,
+   "Direccion": "Bermudez de Castro, 6",
+   "Ciudad": "Oviedo",
+   "Anyo": 1974,
+   "Estado": 5,
+   "Foto":"/album/foto20.jpg"
+ },
+ {
+   "ID": 21,
+   "Precio": 444621,
+   "Direccion": "Mendizabal, 1",
+   "Ciudad": "Oviedo",
+   "Anyo": 1982,
+   "Estado": 5,
+   "Foto":"/album/foto21.jpg"
+ },
+ {
+   "ID": 22,
+   "Precio": 404299,
+   "Direccion": "Reyes Catolicos, 5",
+   "Ciudad": "Oviedo",
+   "Anyo": 1971,
+   "Estado": 2,
+   "Foto":"/album/foto22.jpg"
+ },
+ {
+   "ID": 23,
+   "Precio": 378058,
+   "Direccion": "Covadonga, 6",
+   "Ciudad": "Oviedo",
+   "Anyo": 1987,
+   "Estado": 3,
+   "Foto":"/album/foto23.jpg"
+ },
+ {
+   "ID": 24,
+   "Precio": 209452,
+   "Direccion": "avenida Santander, 12",
+   "Ciudad": "Oviedo",
+   "Anyo": 1962,
+   "Estado": 5,
+   "Foto":"/album/foto24.jpg"
+ },
+ {
+   "ID": 25,
+   "Precio": 351752,
+   "Direccion": "Marques de Pidal, 9",
+   "Ciudad": "Oviedo",
+   "Anyo": 1969,
+   "Estado": 4,
+   "Foto":"/album/foto25.jpg"
+ },
+ {
+   "ID": 26,
+   "Precio": 446278,
+   "Direccion": "avenida Galicia, 5",
+   "Ciudad": "Oviedo",
+   "Anyo": 1974,
+   "Estado": 3,
+   "Foto":"/album/foto26.jpg"
+ },
+ {
+   "ID": 27,
+   "Precio": 260795,
+   "Direccion": "Plaza 6 de agosto, 6",
+   "Ciudad": "Gijon",
+   "Anyo": 1981,
+   "Estado": 2,
+   "Foto":"/album/foto27.jpg"
+ },
+ {
+   "ID": 28,
+   "Precio": 492852,
+   "Direccion": "avenida argentina, 72",
+   "Ciudad": "Gijon",
+   "Anyo": 2011,
+   "Estado": 2,
+   "Foto":"/album/foto28.jpg"
+ },
+ {
+   "ID": 29,
+   "Precio": 217095,
+   "Direccion": "avenida Castilla, 6",
+   "Ciudad": "Gijon",
+   "Anyo": 1980,
+   "Estado": 4,
+   "Foto":"/album/foto29.jpg"
+ },
+ {
+   "ID": 30,
+   "Precio": 83368,
+   "Direccion": "San Bernardo, 45",
+   "Ciudad": "Gijon",
+   "Anyo": 1977,
+   "Estado": 4,
+   "Foto":"/album/foto30.jpg"
+ },
+ {
+   "ID": 31,
+   "Precio": 213751,
+   "Direccion": "ana Maria, 1",
+   "Ciudad": "Gijon",
+   "Anyo": 2002,
+   "Estado": 3,
+   "Foto":"/album/foto31.jpg"
+ },
+ {
+   "ID": 32,
+   "Precio": 474625,
+   "Direccion": "avenida Pablo Iglesias, 51",
+   "Ciudad": "Gijon",
+   "Anyo": 1966,
+   "Estado": 4,
+   "Foto":"/album/foto32.jpg"
+ },
+ {
+   "ID": 33,
+   "Precio": 289902,
+   "Direccion": "aguado, 31",
+   "Ciudad": "Gijon",
+   "Anyo": 1958,
+   "Estado": 2,
+   "Foto":"/album/foto33.jpg"
+ },
+ {
+   "ID": 34,
+   "Precio": 471800,
+   "Direccion": "aragon, 25",
+   "Ciudad": "Gijon",
+   "Anyo": 2001,
+   "Estado": 4,
+   "Foto":"/album/foto34.jpg"
+ },
+ {
+   "ID": 35,
+   "Precio": 404982,
+   "Direccion": "Infiesto, 2 Esq.magnus Blikstad",
+   "Ciudad": "Gijon",
+   "Anyo": 2013,
+   "Estado": 4,
+   "Foto":"/album/foto35.jpg"
+ },
+ {
+   "ID": 36,
+   "Precio": 144770,
+   "Direccion": "avenida de Galicia, 83",
+   "Ciudad": "Gijon",
+   "Anyo": 1968,
+   "Estado": 3,
+   "Foto":"/album/foto36.jpg"
+ },
+ {
+   "ID": 37,
+   "Precio": 422136,
+   "Direccion": "alava, 11",
+   "Ciudad": "Gijon",
+   "Anyo": 1956,
+   "Estado": 3,
+   "Foto":"/album/foto37.jpg"
+ }
+]

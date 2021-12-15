@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf16357010761350" configfile="/tew-2022-110-112-entrega1/WebContent/WEB-INF/faces-config.xml">
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf16357010761350" configfile="/tew2-2022-110-112-Services/WebContent/WEB-INF/faces-config.xml">
   <nodes xsi:type="pageflow:PFPage" name="index.xhtml" x="122" y="561" id="pf16357014450014" referenceLink="//@navigationRule.2/@fromViewId|" outlinks="pf163572181721510 pf16357623081040 pf16357623081041 pf16357982486540 pf16357982486541" path="*"/>
   <nodes xsi:type="pageflow:PFPage" name="Registro.xhtml" x="554" y="178" id="pf16357014450016" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" outlinks="pf16357114232837 pf16357114232838" inlinks="pf16357114232838 pf16357870097390" path="/Registro.xhtml"/>
   <nodes xsi:type="pageflow:PFPage" name="restricted_client/index_client.xhtml" x="770" y="380" id="pf16357114232839" referenceLink="//@navigationRule.8/@fromViewId|" outlinks="pf16357916942140 pf16357978970364" inlinks="pf16357114232837 pf16357623081042 pf16357623081041" path="/restricted_client/index_client.xhtml"/>
@@ -15,39 +15,39 @@
   <nodes xsi:type="pageflow:PFPage" name="restricted_agent/editar_citas_client.xhtml" x="1202" y="188" id="pf16357903449193" referenceLink="//@navigationRule.6/@navigationCase.0/@toViewId|" inlinks="pf16357903449192" path="/restricted_client/editar_citas_client.xhtml"/>
   <nodes xsi:type="pageflow:PFPage" name="restricted_client/gestionar_pisos_client.xhtml" x="986" y="572" id="pf16357916942144" referenceLink="//@navigationRule.8/@navigationCase.1/@toViewId|" inlinks="pf16357916942140" path="/restricted_client/gestionar_pisos_client.xhtml"/>
   <nodes xsi:type="pageflow:PFPage" name="restricted_client/gestion_citas_client.xhtml" x="122" y="1464" id="pf16357919240116" referenceLink="//@navigationRule.7/@navigationCase.0/@toViewId|" path="/restricted_client/gestion_citas_client.xhtml"/>
-  <links id="pf16357114232837" target="pf16357114232839" source="pf16357014450016" outcome="exito" fromaction="#{clientes.salva}"/>
-  <links id="pf163572181721510" target="pf163572181721511" source="pf16357014450014" outcome="casa"/>
-  <links id="pf16357623081043" target="pf16357623081045" source="pf163572181721511" outcome="success_agent" fromaction="#{login.verify}"/>
-  <links id="pf16357623081042" target="pf16357114232839" source="pf163572181721511" outcome="success_client" fromaction="#{login.verify}"/>
-  <links id="pf16357623081040" target="pf16357623081045" source="pf16357014450014" outcome="casa_agent"/>
-  <links id="pf16357623081041" target="pf16357114232839" source="pf16357014450014" outcome="casa_client"/>
-  <links id="pf16357723329909" target="pf163577233299011" source="pf16357723329908" outcome="exito" fromaction="#{pisos.salva}"/>
-  <links id="pf163577233299010" target="pf163577233299012" source="pf16357723329908" outcome="error" fromaction="#{pisos.salva}"/>
-  <links id="pf16357723329906" target="pf163577233299011" source="pf16357623081045" outcome="gestion_agente_casas"/>
-  <links id="pf16357723329907" target="pf163577233299012" source="pf16357623081045" outcome="creacion_agente_casas"/>
-  <links id="pf163578349400913" target="pf163578349400914" source="pf16357623081045" outcome="gestion_agente_citas"/>
-  <links id="pf163578349400915" target="pf163578349400917" source="pf163578349400914" outcome="editar"/>
-  <links id="pf16357870097390" target="pf16357014450016" source="pf163572181721511" outcome="registro"/>
-  <links id="pf16357903449192" target="pf16357903449193" source="pf16357903449191" outcome="editar"/>
-  <links id="pf16357916942140" target="pf16357916942144" source="pf16357114232839" outcome="gestion_cliente_casas"/>
-  <links id="pf16357916942142" target="pf163578349400914" source="pf163578349400917" outcome="exito" fromaction="#{pisosParaVisitar.salva}"/>
-  <links id="pf16357978970364" target="pf16357903449191" source="pf16357114232839" outcome="gestion_agente_citas"/>
-  <links id="pf16357982486540" target="pf163572181721511" source="pf16357014450014" outcome="exito" fromaction="#{login.logoutCliente}"/>
-  <links id="pf16357982486541" target="pf163572181721511" source="pf16357014450014" outcome="exito" fromaction="#{login.logoutAgente}"/>
-  <links id="pf16357114232838" target="pf16357014450016" source="pf16357014450016" outcome="error" fromaction="#{clientes.salva}">
+  <links id="pf16357114232837" target="pf16357114232839" source="pf16357014450016"/>
+  <links id="pf163572181721510" target="pf163572181721511" source="pf16357014450014"/>
+  <links id="pf16357623081043" target="pf16357623081045" source="pf163572181721511"/>
+  <links id="pf16357623081042" target="pf16357114232839" source="pf163572181721511"/>
+  <links id="pf16357623081040" target="pf16357623081045" source="pf16357014450014"/>
+  <links id="pf16357623081041" target="pf16357114232839" source="pf16357014450014"/>
+  <links id="pf16357723329909" target="pf163577233299011" source="pf16357723329908"/>
+  <links id="pf163577233299010" target="pf163577233299012" source="pf16357723329908"/>
+  <links id="pf16357723329906" target="pf163577233299011" source="pf16357623081045"/>
+  <links id="pf16357723329907" target="pf163577233299012" source="pf16357623081045"/>
+  <links id="pf163578349400913" target="pf163578349400914" source="pf16357623081045"/>
+  <links id="pf163578349400915" target="pf163578349400917" source="pf163578349400914"/>
+  <links id="pf16357870097390" target="pf16357014450016" source="pf163572181721511"/>
+  <links id="pf16357903449192" target="pf16357903449193" source="pf16357903449191"/>
+  <links id="pf16357916942140" target="pf16357916942144" source="pf16357114232839"/>
+  <links id="pf16357916942142" target="pf163578349400914" source="pf163578349400917"/>
+  <links id="pf16357978970364" target="pf16357903449191" source="pf16357114232839"/>
+  <links id="pf16357982486540" target="pf163572181721511" source="pf16357014450014"/>
+  <links id="pf16357982486541" target="pf163572181721511" source="pf16357014450014"/>
+  <links id="pf16357114232838" target="pf16357014450016" source="pf16357014450016">
     <bendPoints d1Height="-36" d2Height="-36"/>
     <bendPoints d1Width="-64" d1Height="-36" d2Width="-64" d2Height="-36"/>
     <bendPoints d1Width="-64" d2Width="-64"/>
   </links>
-  <links id="pf16357623081044" target="pf163572181721511" source="pf163572181721511" outcome="login" fromaction="#{login.verify}">
+  <links id="pf16357623081044" target="pf163572181721511" source="pf163572181721511">
     <bendPoints d1Height="-36" d2Height="-36"/>
     <bendPoints d1Width="-64" d1Height="-36" d2Width="-64" d2Height="-36"/>
     <bendPoints d1Width="-64" d2Width="-64"/>
   </links>
-  <links id="pf16357916942143" target="pf163578349400917" source="pf163578349400917" outcome="error" fromaction="#{pisosParaVisitar.salva}">
+  <links id="pf16357916942143" target="pf163578349400917" source="pf163578349400917">
     <bendPoints d1Height="-36" d2Height="-36"/>
     <bendPoints d1Width="-64" d1Height="-36" d2Width="-64" d2Height="-36"/>
     <bendPoints d1Width="-64" d2Width="-64"/>
   </links>
-  <links id="pf16357982486542" target="pf163578349400917" source="pf163578349400914" outcome="editar"/>
+  <links id="pf16357982486542" target="pf163578349400917" source="pf163578349400914"/>
 </pageflow:Pageflow>
