@@ -19,13 +19,12 @@
      var pisos=PisosServicesRs.getPisos();
       // Obtener el elemento HTML donde ir dejando el resultado
       // del servicio
-     div = document.getElementById("contenido")
-     div.innerHTML = "";
-     for (i in pisos) {
-       div.innerHTML += pisos[i]["id"] + pisos[i]["precio"] + pisos[i]["direccion"] + pisos[i]["estado"]+"</br>";
-      }
-     /*div.innerHTML = '<table class="table">' +
-    	 				'<thead class="thead-dark">'+
+     table = document.getElementById("table")
+     table.innerHTML = "";
+     /*for (i in pisos) {
+       table.innerHTML += pisos[i]["id"] + pisos[i]["precio"] + pisos[i]["direccion"] + pisos[i]["estado"]+"</br>";
+      }*/
+     table.innerHTML = '<thead class="thead-dark">'+
     	 				'<tr>'+
                         	'<th scope="col">ID</th>'+
                        		'<th scope="col">IDAgente</th>'+
@@ -39,21 +38,20 @@
                     	'</thead>'+
                     	'<tbody>';
      for (i in pisos) {
-       div.innerHTML += '<tr>'+
-       						'<td>pisos[i]["id"]</td>'+ 
-       						'<td>pisos[i]["idAgente"]</td>'+ 
-       						'<td>pisos[i]["precio"]</td>'+ 
-       						'<td>pisos[i]["direccion"]</td>'+ 
-       						'<td>pisos[i]["ciudad"]</td>'+ 
-       						'<td>pisos[i]["ano"]</td>'+ 
-       						'<td>pisos[i]["estado"]</td>'+
-       						'<td>a<img src="pisos[i]["foto"]"></td>'+ 
-       						'<td><a href="editPiso.html">Editar</a></td>'+
-       						'<td><a href="editPiso.html">Borrar</a></td>'+
+       table.innerHTML += "<tr>"+
+       						"<td>"+pisos[i]["id"]+"</td>"+ 
+       						"<td>"+pisos[i]["idAgente"]+"</td>"+ 
+       						"<td>"+pisos[i]["precio"]+"</td>"+ 
+       						"<td>"+pisos[i]["direccion"]+"</td>"+  
+       						"<td>"+pisos[i]["ciudad"]+"</td>"+  
+       						"<td>"+pisos[i]["ano"]+"</td>"+ 
+       						"<td>"+pisos[i]["estado"]+"</td>"+ 
+       						'<td><img src="'+pisos[i]["foto"]+'"></td>'+  
+       						'<td><a href="edit.html">Editar</a></td>'+ 
+       						'<td><a href="edit.html">Editar</a></td>'+ 
        					"</tr>";
       }
-     div.innerHTML += '</tbody>'+
-     				'</table>';*/
+     table.innerHTML += '</tbody>';
      
     }
   </script>
@@ -61,8 +59,12 @@
 
 <body onload="solicitarDatosPisos()">
 	<h1>Listado de pisos</h1>
-	<br />
-	<div id="contenido" style="height: 90%; top: 30px">Resultado del
+	<br/>
+	<div id="contenido" style="height: 90%; top: 30px">
+	<table id="table" class="table">
+	
+	</table>
+	Resultado del
 		servicio REST...</div>
 </body>
 </html>
