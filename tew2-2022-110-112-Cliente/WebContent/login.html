@@ -1,0 +1,73 @@
+<!-- 
+***************************************************
+Asignatura: Tecnologías Web
+Titulación: GIITIN
+Autor     : Cabal
+Universidad de Oviedo
+***************************************************
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tecnologias Web. Login</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+
+<script
+	src="jquery/Jquery-1.11.3.min.js"></script>
+<script
+	src="bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript"
+	src="http://localhost:8080/tew2-2022-110-112-Services/rest-jsapi"></script>
+<script type="text/javascript" src="javascript/functions_login.js"></script>	
+
+<title>Login</title>
+</head>
+
+<body style="background-color: #C1C8E4">
+	<div class="container">
+
+		<!-- 
+	***************************************************
+	* SECTION con dos partes:                         *
+	* - header  (Titulo de cabecera)                  *
+	* - y article con formulario                      *
+	***************************************************
+	-->
+		<section>
+
+			<header class="page-header">
+				<h1>Login</h1>
+				<time datetime="12/2021" pubdate> Diciembre 2021 </time>
+			</header>
+			<article>
+				<h3>Suministrar las credenciales para autenticarse:</h3>
+				<form id="login" action="#"
+					enctype="application/x-www-form-urlencoded">
+					<div class="form-group">
+						<label for="username">Login de Agente:</label> <input type="text"
+							class="form-control" id="username" size="25" required />
+					</div>
+
+					<div class="form-group">
+						<label for="username">Contraseña:</label> <input type="password"
+							class="form-control" id="passwd" size="25" required />
+					</div>
+
+					<button type="submit" class="btn btn-default" id ="btnEnviar" action="#">Enviar</button>
+					<button type="reset" class="btn btn-default">Reiniciar</button>
+				</form>
+			</article>
+		</section>
+	</div>
+	
+	
+	
+	
+	
+</body>
+</html>

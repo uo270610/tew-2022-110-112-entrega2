@@ -250,9 +250,11 @@ public class AgenteJdbcDao implements AgenteDao {
 			tablaPisosParaVisitar = con.prepareStatement("delete from pisos_para_visitar");
 			tablaPisos = con.prepareStatement("delete from pisos");
 			
-			tablaAgentes.executeUpdate();
+			//tablaAgentes.executeUpdate();
+			tablaClientes.executeUpdate();
 			tablaClientes.executeUpdate();
 			tablaPisosParaVisitar.executeUpdate();
+			tablaPisos.executeUpdate();
 			tablaPisos.executeUpdate();
 			
 		} catch (ClassNotFoundException e) {
@@ -263,7 +265,7 @@ public class AgenteJdbcDao implements AgenteDao {
 			throw new PersistenceException("Invalid SQL or database schema", e);
 		}
 		finally  {
-			if (tablaAgentes != null) {try{ tablaAgentes.close(); } catch (Exception ex){}};
+			//if (tablaAgentes != null) {try{ tablaAgentes.close(); } catch (Exception ex){}};
 			if (tablaClientes != null) {try{ tablaClientes.close(); } catch (Exception ex){}};
 			if (tablaPisosParaVisitar != null) {try{ tablaPisosParaVisitar.close(); } catch (Exception ex){}};
 			if (tablaPisos != null) {try{ tablaPisos.close(); } catch (Exception ex){}};

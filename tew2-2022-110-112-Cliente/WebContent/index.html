@@ -7,11 +7,11 @@
 
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"> 
 <script 
-src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+src="jquery/Jquery-1.11.3.min.js"></script> 
 <script 
-src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+src="bootstrap/js/bootstrap.min.js"></script>
 </head>
-<body style="background-color: #E3CAA1">
+<body style="background-color: #C1C8E4">
 
 	<div class="container">
 
@@ -19,25 +19,27 @@ src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></scrip
 			<h1>Entrega2-Cliente</h1>
 		</div>
 		
-		<nav>
-			<section>
-				<ul>
-					<li>Pisos
-						<ul>
-							<li><a href="listado.html" target="formulario">Listado</a></li>
-							<li><a href="alta.html" target="formulario">Alta</a></li>
-							<li><a href="edit.html" target="formulario">Editar</a></li>
-						</ul>
-					</li>
-					<li>Sesión
-						<ul>
-							<li><a href="#login" target="formulario">Login</a></li>
-							<li><a href="#logout">Logout</a></li>
-						</ul>
-					</li>
-				</ul>
-			</section>
-		</nav>
+		<nav class="navbar navbar-default">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="index.html" target="formulario">Casa</a>
+				</div>
+				<div>
+					<ul class="nav navbar-nav">
+						
+						<li class="dropdown"><a class="dropdown-toggle"
+							data-toggle="dropdown" href="#">Clientes<span
+								class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="listado.html" target="formulario">Listado</a></li>
+								
+							</ul></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="login.html" target="formulario"><span
+								class="glyphicon glyphicon-log-in"></span> Login</a></li>	
+					</ul>
+				</div>
+			</nav>
 
 		<div class="row">
 			<!--  
@@ -46,7 +48,7 @@ src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></scrip
 	*************************************************** 
 	-->
 			<div class="col-sm-9">
-				<iframe name="formulario" src="#login" width="750px" height="500px">
+				<iframe name="formulario" src="login.html" width="750px" height="500px">
 				</iframe>
 			</div>
 			<!-- 
@@ -76,8 +78,7 @@ src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></scrip
 	-->
 		<div class="panel-footer">
 			<ul>
-				<li><a href="index_bootstrap.html">Casa</a></li>
-				<li><a href="#">Contacto</a></li>
+				<li><a href="index.html">Casa</a></li>
 			</ul>
 		</div>
 	</div>
