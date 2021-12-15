@@ -5,33 +5,33 @@
 
 function Model() {
 	//variable Piso.
-	 this.Piso= null;
+	 this.piso= null;
 	 
 
 	this.rellenaPisoDelFormulario = function () {
 		var piso= {
-		id=1,
-		idAgente=localStorage.getItem('agente'),
-		precio=$("#precio").val(),
-		direccion=$("#direccion").val(),
-		ciudad=$("#ciudad").val(),
-		anyo=$("#ano").val(),
-		estado=$("#estado").val(),
-		foto=$("#foto").val()
+		id:1,
+		idAgente:localStorage.getItem('agente'),
+		precio:$("#precio").val(),
+		direccion:$("#direccion").val(),
+		ciudad:$("#ciudad").val(),
+		anyo:$("#ano").val(),
+		estado:$("#estado").val(),
+		foto:$("#foto").val()
 		}
 		return piso
 	        }
 	
-	this.AltaPiso = function(Piso){
+	this.AltaPiso = function(piso){
 		PisosServicesRs.savePiso({
-			$entity:Piso,
+			$entity:piso,
 			$contentType:"application/json"
 		});
 	}
 	
-	this.EditarPiso=function(Piso){
+	this.EditarPiso=function(piso){
 		PisosServicesRs.updatePiso({
-			$entity:Piso,
+			$entity:piso,
 			$contentType:"application/json"
 		});
 	}
@@ -47,8 +47,8 @@ function Controller(varmodel) {
 	this.init = function() {
 		$("#btnSave").click(
 				function(event){
-		    Piso=that.model.rellenaPisoDelFormulario();
-		    that.model.AltaPiso(Piso);
+		    piso=that.model.rellenaPisoDelFormulario();
+		    that.model.AltaPiso(piso);
 		    	window.location.href="listado.html";
 		    	return false;
 				
