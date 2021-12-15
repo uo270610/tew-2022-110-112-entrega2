@@ -10,6 +10,7 @@ import com.tew.model.Piso;
 import com.tew.persistence.exception.AlreadyPersistedException;
 import com.tew.persistence.exception.NotPersistedException;
 
+@Path("/PisosServicesRs")
 public interface PisosServicesRs extends PisoService{
 
 	@GET

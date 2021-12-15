@@ -23,7 +23,7 @@ public class PisoJdbcDao implements PisoDao{
 		PreparedStatement ps = null;
 		ResultSet rs = null;
 		Connection con = null;
-		
+		Piso piso = null;
 		List<Piso> pisos = new ArrayList<Piso>();
 
 		try {
@@ -38,8 +38,9 @@ public class PisoJdbcDao implements PisoDao{
 			con = DriverManager.getConnection(SQL_URL, "sa", "");
 			ps = con.prepareStatement("SELECT * FROM PISOS");
 			rs = ps.executeQuery();
-			Piso piso = new Piso();
+			
 			while (rs.next()) {
+				piso = new Piso();
 				piso.setId(rs.getLong("ID"));
 				piso.setIdAgente(rs.getLong("ID_AGENTE"));
 				piso.setPrecio(rs.getDouble("PRECIO"));
@@ -48,7 +49,7 @@ public class PisoJdbcDao implements PisoDao{
 				piso.setAno(rs.getInt("ANO"));
 				piso.setEstado(rs.getInt("ESTADO"));
 				piso.setCiudad(rs.getString("FOTO"));
-				
+				System.out.print(""+piso.getId()+"\t"+piso.getEstado());
 				pisos.add(piso);
 			}
 			

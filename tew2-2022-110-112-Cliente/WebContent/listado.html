@@ -20,7 +20,11 @@
       // Obtener el elemento HTML donde ir dejando el resultado
       // del servicio
      div = document.getElementById("contenido")
-     div.innerHTML = '<table class="table">' +
+     div.innerHTML = "";
+     for (i in pisos) {
+       div.innerHTML += pisos[i]["id"] + pisos[i]["precio"] + pisos[i]["direccion"] + pisos[i]["estado"]+"</br>";
+      }
+     /*div.innerHTML = '<table class="table">' +
     	 				'<thead class="thead-dark">'+
     	 				'<tr>'+
                         	'<th scope="col">ID</th>'+
@@ -49,7 +53,8 @@
        					"</tr>";
       }
      div.innerHTML += '</tbody>'+
-     				'</table>';
+     				'</table>';*/
+     
     }
   </script>
 </head>
