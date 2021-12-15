@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ejemplo sencillo de web service con RESTEasy</title>
+<script type="text/javascript"
+	src="http://localhost:8080/tew2-2022-110-112-Services/rest-jsapi"></script>
+
+<!--Uso de hojas de estilo de bootstrap local-->
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color: #C1C8E4">
+<section>
+		<article>
+			<h3>Alta de piso:</h3>
+			<form id="frmCRUDPisos" accept-charset=utf-8>
+				<div class="form-group">
+					<label for="id">ID:</label> <input type="text" id="id"
+						readonly="readonly" class="form-control" />
+				</div>
+				<div class="form-group">
+					<label for="idAgente">IDAgente:</label> <input type="text"
+						id="idAgente" readonly="readonly" required class="form-control" />
+				</div>
+				<div class="form-group">
+					<label for="precio">Precio:</label> <input type="text" id="precio"
+						required class="form-control" size="25" />
+				</div>
+				<div class="form-group">
+					<label for="direccion">Direccion:</label> <input type="text"
+						id="direccion" required class="form-control" size="25" />
+				</div>
+				<div class="form-group"> 
+					<label for="ciudad">Ciudad:</label> <input type="text" id="ciudad"
+						required class="form-control" size="25" />
+				</div>
+				<div class="form-group">
+					<label for="ano">Anyo:</label> <input type="text" id="ano" required
+						class="form-control" size="25" />
+				</div>
+				<div class="form-group">
+					<label for="estado">Estado:</label> <select id="estado">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="4">5</option>
+					</select>
+				</div>
+
+				<div class="form-group">
+					<label for="foto">Foto:</label> <input type="text" id="foto"
+						required class="form-control" size="25" />
+				</div>
+				<input type="submit" value="Salvar" id="btnSave" required
+					class="btn btn-default" /> <input type="reset" value="Reset"
+					id="btnReset" required class="btn btn-default" />
+			</form>
+		</article>
+		<article class="table-responsive">
+			<table class="sortable table table-striped table-responsive "
+				id="tbPiso">
+			</table>
+		</article>
+	</section>
+
+</body>
+</html>
