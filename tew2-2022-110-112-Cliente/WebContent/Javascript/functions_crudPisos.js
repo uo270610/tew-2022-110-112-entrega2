@@ -6,21 +6,6 @@
 function Model() {
 	//variable Piso.
 	 this.piso= null;
-	 
-
-	this.rellenaPisoDelFormulario = function () {
-		var piso= {
-		id:1,
-		idAgente:localStorage.getItem('agente'),
-		precio:$("#precio").val(),
-		direccion:$("#direccion").val(),
-		ciudad:$("#ciudad").val(),
-		anyo:$("#ano").val(),
-		estado:$("#estado").val(),
-		foto:$("#foto").val()
-		}
-		return piso
-	        }
 	
 	this.AltaPiso = function(piso){
 		PisosServicesRs.savePiso({
@@ -41,13 +26,14 @@ function Model() {
 };
 
 
-function Controller(varmodel) {
+function Controller(varmodel,varview) {
 	var that = this;
 	this.model = varmodel;
+	this.view=varview;
 	this.init = function() {
 		$("#btnSave").click(
 				function(event){
-		    piso=that.model.rellenaPisoDelFormulario();
+		    piso=that.view.rellenaPisoDelFormulario();
 		    that.model.AltaPiso(piso);
 		    	window.location.href="listado.html";
 		    	return false;
@@ -55,12 +41,33 @@ function Controller(varmodel) {
 		});
 }
 			
-};	
+};
+
+function View(){
+	this.rellenaPisoDelFormulario = function () {
+		var piso= {
+		id:1,
+		idAgente:localStorage.getItem('agente'),
+		precio:$("#precio").val(),
+		direccion:$("#direccion").val(),
+		estado:$("#estado").val(),
+		ciudad:$("#ciudad").val(),
+		ano:$("#ano").val(),
+		foto:$("#foto").val()
+		}
+		return piso
+	        }
+}
+
 $(function() {
 	// Creamos el modelo con los datos y la conexión al servicio web.
 	var model = new Model();
+	
+	var view = new View();
 	// Creamos el controlador
-	var control = new Controller(model);
+	var control = new Controller(model, view);
+	
+	
 	// Iniciamos la aplicación
 	control.init();
 });
