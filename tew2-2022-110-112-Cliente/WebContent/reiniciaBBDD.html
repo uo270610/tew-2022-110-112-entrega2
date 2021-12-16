@@ -20,14 +20,8 @@
   </script>
  <script>
 		function reiniciaBbdd() {
-			var txt;
-			if (confirm("Seguro que no la estás liando?")) {
-				txt = "Espero que sepas lo que has hecho, porque se ha ido";
-				PisosServicesRs.borrarDataBase();
-			} else {
-				txt = "Al palo, proceso abortado";
-			}
-			document.getElementById("demo").innerHTML = txt;
+			PisosServicesRs.borrarDataBase();
+			window.location.href="listadoAgente.html";
 		}
 	</script>
 </head>
