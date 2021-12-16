@@ -55,9 +55,17 @@
      
     }
   </script>
+  
+  <script type="text/javascript">
+   function comprobarAutorizacion() {
+	   if (localStorage.getItem('agente')==null){
+		   window.location.href="login.html";
+	   }
+    }
+  </script>
 </head>
 
-<body onload="solicitarDatosPisos()">
+<body onload="solicitarDatosPisos()" onload="comprobarAutorizacion()">
 	<h1>Listado de pisos</h1>
 	<br/>
 	<div id="contenido" style="height: 90%; top: 30px">

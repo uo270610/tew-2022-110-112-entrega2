@@ -11,8 +11,15 @@ src="jquery/Jquery-1.11.3.min.js"></script>
 <script 
 src="bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="javascript/functions_crudPisos.js"></script>
+<script type="text/javascript">
+   function comprobarAutorizacion() {
+	   if (localStorage.getItem('agente')==null){
+		   window.location.href="login.html";
+	   }
+    }
+  </script>
 </head>
-<body style="background-color: #C1C8E4">
+<body onload="comprobarAutorizacion()" style="background-color: #C1C8E4">
 
 <section>
 		<article>

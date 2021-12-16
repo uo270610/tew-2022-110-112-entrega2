@@ -11,9 +11,15 @@
 <script src="bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript"
 	src="http://localhost:8080/gestioneitorv3_0/rest-jsapi"></script>
-<script src="sorttable.js"></script>
+<script type="text/javascript">
+   function comprobarAutorizacion() {
+	   if (localStorage.getItem('agente')==null){
+		   window.location.href="login.html";
+	   }
+    }
+  </script>
 </head>
-<body>
+<body onload="comprobarAutorizacion()" style="background-color: #C1C8E4">
 	<p>Borrado de base de datos</p>
 	<input type="submit" value="Reiniciar base de datos" id="btnReset"
 		required class="btn btn-default" onClick="reiniciaBbdd()" />
@@ -22,11 +28,11 @@
 	<script>
 		function reiniciaBbdd() {
 			var txt;
-			if (confirm("Deseas borrar la base de datos?")) {
-				txt = "La base de datos se ha borrado";
+			if (confirm("Seguro que no la estás liando?")) {
+				txt = "Espero que sepas lo que has hecho, porque se ha ido";
 				PisosServicesRs.borrarDataBase();
 			} else {
-				txt = "Se ha abortado el proceso";
+				txt = "Al palo, proceso abortado";
 			}
 			document.getElementById("demo").innerHTML = txt;
 		}

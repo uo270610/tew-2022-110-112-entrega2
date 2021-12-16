@@ -23,8 +23,19 @@ Universidad de Oviedo
 <script type="text/javascript"
 	src="http://localhost:8080/gestioneitorv3_0/rest-jsapi"></script>
 <script type="text/javascript" src="javascript/functions_login.js"></script>
+
+
+<script type="text/javascript">
+   function comprobarAutorizacion() {
+	   if (localStorage.getItem('agente')==null){
+		   window.location.href="login.html";
+	   }
+    }
+  </script>
+
+
 </head>
-<body style="background-color: #C1C8E4">
+<body onload="comprobarAutorizacion()" style="background-color: #C1C8E4">
 
 	<div class="container">
 		<!-- 
