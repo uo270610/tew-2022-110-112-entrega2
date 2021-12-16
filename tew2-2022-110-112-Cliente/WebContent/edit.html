@@ -19,31 +19,31 @@ src="bootstrap/js/bootstrap.min.js"></script>
 			<h3>Editar Pisos:</h3>
 			<form id="frmCRUDPisos">
 				<div class="form-group">
-					<label for="id">ID:</label> <input type="text" id="id"
+					<label for="id">ID:</label> <input type="text" id="editarid"
 						readonly="readonly" class="form-control" />
 				</div>
 				<div class="form-group">
 					<label for="idAgente">IDAgente:</label> <input type="text"
-						id="idAgente" readonly="readonly"  required class="form-control" />
+						id="editaridAgente" readonly="readonly"  required class="form-control" />
 				</div>
 				<div class="form-group">
-					<label for="precio">Precio:</label> <input type="text" id="precio"
+					<label for="precio">Precio:</label> <input type="text" id="editarprecio"
 						required class="form-control" size="25" />
 				</div>
 				<div class="form-group">
 					<label for="direccion">Direccion:</label> <input type="text"
-						id="direccion" required class="form-control" size="25" />
+						id="editardireccion" required class="form-control" size="25" />
 				</div>
 				<div class="form-group">
-					<label for="ciudad">Ciudad:</label> <input type="text" id="ciudad"
+					<label for="ciudad">Ciudad:</label> <input type="text" id="editarciudad"
 						required class="form-control" size="25" />
 				</div>
 				<div class="form-group">
-					<label for="ano">Anyo:</label> <input type="text" id="ano" required
+					<label for="ano">Anyo:</label> <input type="text" id="editarano" required
 						class="form-control" size="25" />
 				</div>
 				<div class="form-group">
-					<label for="estado">Estado:</label> <select id="estado">
+					<label for="estado">Estado:</label> <select id="editarestado">
 						<option value="1">1</option>
 						<option value="2">2</option>
 						<option value="3">3</option>
@@ -52,12 +52,12 @@ src="bootstrap/js/bootstrap.min.js"></script>
 					</select>
 				</div>
 				<div class="form-group">
-					<label for="foto">Foto:</label> <input type="text" id="foto"
+					<label for="foto">Foto:</label> <input type="text" id="editarfoto"
 						required class="form-control" size="25" />
 				</div>
 				<input type="submit" value="Salvar" id="btnSave" required
 					class="btn btn-default" /> <input type="reset" value="Reset"
-					id="btnReset" required class="btn btn-default" />
+					id="btnEditar" required class="btn btn-default" />
 			</form>
 		</article>
 		<article class="table-responsive">

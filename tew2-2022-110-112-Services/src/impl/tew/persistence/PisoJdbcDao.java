@@ -251,6 +251,8 @@ public class PisoJdbcDao implements PisoDao{
 				piso.setEstado(rs.getInt("ESTADO"));
 				piso.setCiudad(rs.getString("FOTO"));
 				
+				System.out.print(piso.getId());
+				
 				pisos.add(piso);
 			}
 			
@@ -267,7 +269,7 @@ public class PisoJdbcDao implements PisoDao{
 			if (ps != null) {try{ ps.close(); } catch (Exception ex){}};
 			if (con != null) {try{ con.close(); } catch (Exception ex){}};
 		}
-		return null;
+		return piso;
 	}
 	
 }

@@ -28,7 +28,12 @@ function Model() {
 		});
 	
 	}
-	        
+	
+	this.EncuentraPiso=function(id_piso){
+		PisosServicesRs.findById({
+			id: id_piso
+		});
+}     
 	  
 
 };
@@ -48,9 +53,12 @@ function Controller(varmodel,varview) {
 		    	return false;
 				
 		});
-		$("#editPress").click(
-				function(event){
-					piso=that.view.rellenaPisoDeTabla();
+		$("#table").on("click", ".editPress", function(event){
+					var id_piso = that.view.getIdPiso($(this));
+					console.log(id_piso);
+					piso=that.model.EncuentraPiso(id_piso);
+					console.log(piso);
+					that.view.rellenaTablaConPiso(piso);
 				});
 		
 		
@@ -110,18 +118,16 @@ function View(){
 		return piso
 	        }
 	
-	this.rellenaPisoDeTabla = function () {
-		var piso= {
-		id:1,
-		idAgente:localStorage.getItem('agente'),
-		precio:$("#precio").val(),
-		direccion:$("#direccion").val(),
-		estado:$("#estado").val(),
-		ciudad:$("#ciudad").val(),
-		ano:$("#ano").val(),
-		foto:$("#foto").val()
-		}
-		return piso
+	this.rellenaTablaConPiso = function (piso) {
+		var pisin=piso;
+		$("#editarid").val(pisin.id);
+		$("#editaridAgente").val(pisin.idAgente);
+		$("#editarprecio").val(pisin.precio);
+		$("#editardireccion").val(pisin.direccion);
+		$("#editarciudad").val(pisin.ciudad);
+		$("#editarano").val(pisin.ano);
+		$("#editarestado").val(pisin.estado);
+		$("#editarfoto").val(pisin.foto);
 	        }
 	
 	
