@@ -18,14 +18,7 @@
 	   }
     }
   </script>
-</head>
-<body onload="comprobarAutorizacion()" style="background-color: #C1C8E4">
-	<p>Borrado de base de datos</p>
-	<input type="submit" value="Reiniciar base de datos" id="btnReset"
-		required class="btn btn-default" onClick="reiniciaBbdd()" />
-	<p id="demo"></p>
-
-	<script>
+ <script>
 		function reiniciaBbdd() {
 			var txt;
 			if (confirm("Seguro que no la estás liando?")) {
@@ -37,5 +30,10 @@
 			document.getElementById("demo").innerHTML = txt;
 		}
 	</script>
+</head>
+<body onload="comprobarAutorizacion()" style="background-color: #C1C8E4">
+	<p>Borrado de base de datos</p>
+	<input type="submit" value="Reiniciar base de datos" id="btnReset"
+		required class="btn btn-default" onClick="reiniciaBbdd()" />
 </body>
 </html>
