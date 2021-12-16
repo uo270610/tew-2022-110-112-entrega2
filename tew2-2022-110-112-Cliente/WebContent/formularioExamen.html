@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ejercicio 1 del examen</title>
+<script type="text/javascript"
+	src="http://localhost:8080/tew2-2022-110-112-Services/rest-jsapi"></script>
+
+<!--Uso de hojas de estilo de bootstrap local-->
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<script
+	src="jquery/Jquery-1.11.3.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script
+	src="bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="javascript/functions_examen.js"></script>
+</head>
+<body style="background-color: #C1C8E4">
+<section>
+		<article>
+			<h3>Agrupar los pisos en funcion de umbrales:</h3>
+			<form id="formCRUDPisos" accept-charset=utf-8>
+				<div class="form-group">
+					<label for="precio">Umbral inferior:</label> <input type="text" id="precio"
+						required class="form-control" size="25" />
+				</div>
+				<div class="form-group">
+					<label for="direccion">Umbral superior:</label> <input type="text"
+						id="direccion" required class="form-control" size="25" />
+				</div>
+				<input type="submit" value="Salvar" id="btnSalvarFormularioExamen" required
+					class="btn btn-default" /> <input type="reset" value="Reset"
+					id="btnResetFormularioExamen" required class="btn btn-default" />
+			</form>
+		</article>
+		<article class="table-responsive">
+			<table class="sortable table table-striped table-responsive "
+				id="tbPiso">
+			</table>
+		</article>
+	</section>
+
+</body>
+</html>
