@@ -13,19 +13,26 @@
 <script
 	src="bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="javascript/functions_examen.js"></script>
+	
+	<script type="text/javascript">
+		function ponerValores(){
+			campoMax = document.getElementById("preciomax").value = localStorage.getItem('maximo');
+			campoMin = document.getElementById("preciomin").value = localStorage.getItem('minimo');
+		}
+	</script>
 </head>
-<body style="background-color: #C1C8E4">
+<body onload="ponerValores()" style="background-color: #C1C8E4">
 <section>
 		<article>
 			<h3>Agrupar los pisos en funcion de umbrales:</h3>
 			<form id="formCRUDPisos" accept-charset=utf-8>
 				<div class="form-group">
-					<label for="precio">Umbral inferior:</label> <input type="text" id="precio"
+					<label for="precio">Umbral inferior:</label> <input type="text" id="preciomin"
 						required class="form-control" size="25" />
 				</div>
 				<div class="form-group">
 					<label for="direccion">Umbral superior:</label> <input type="text"
-						id="direccion" required class="form-control" size="25" />
+						id="preciomax" required class="form-control" size="25" />
 				</div>
 				<input type="submit" value="Salvar" id="btnSalvarFormularioExamen" required
 					class="btn btn-default" /> <input type="reset" value="Reset"

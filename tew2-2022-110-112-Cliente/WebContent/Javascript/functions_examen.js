@@ -15,16 +15,10 @@ function Model() {
 	 this.precios = function(){
 		 this.n = 0
 		 this.load();
-		 for(i in tbPisos){
-			 precioArray[n] = this.tbPisos[i]["precio"];
-			 n=n+1;
+		 for(i in this.tbPisos){
+			 this.precioArray[this.n] = this.tbPisos[i]["precio"];
+			 this.n=this.n+1;
 		 }
-	 }
-	 this.max = function(){
-		 this.nmax = Math.max(...precioArray);
-	 }
-	 this.max = function(){
-		 this.nmin = Math.min(...precioArray);
 	 }
 }
 function Controller(varmodel,varview) {
@@ -32,8 +26,8 @@ function Controller(varmodel,varview) {
 	this.model = varmodel;
 	this.view=varview;
 	this.init = function() {
-		$("#umbralSuperior").val(that.model.max());
-		$("#umbralInferior").val(that.model.min());
+		localStorage.setItem('maximo', Math.max(...this.model.precioArray)*2/3);
+		localStorage.setItem('minimo', Math.min(...this.model.precioArray)/3);
 	}
 }
 
@@ -47,6 +41,7 @@ $(function() {
 	// Creamos el modelo con los datos y la conexión al servicio web.
 	var model = new Model();
 	model.load();
+	model.precios();
 	var view = new View();
 	// Creamos el controlador
 	var control = new Controller(model, view);
