@@ -7,6 +7,11 @@ function Model() {
 	//variable Piso.
 	 this.piso= null;
 	 this.IdArray = [];
+	 this.tbPisos = null;
+	 
+	this.load = function() {
+		this.tbPisos = PisosServicesRs.getPisos();
+	}
 	 
 	this.AltaPiso = function(piso){
 		PisosServicesRs.savePiso({
@@ -33,9 +38,8 @@ function Model() {
 		PisosServicesRs.findById({
 			id: id_piso
 		});
-}     
-	  
-
+	}     
+	 
 };
 
 
@@ -44,7 +48,7 @@ function Controller(varmodel,varview) {
 	this.model = varmodel;
 	this.view=varview;
 	this.init = function() {
-
+		this.view.list(this.model.tbPisos);
 		$("#btnSave").click(
 				function(event){
 		    piso=that.view.rellenaPisoDelFormulario();
@@ -53,6 +57,14 @@ function Controller(varmodel,varview) {
 		    	return false;
 				
 		});
+		
+		$("#botonCiudad").click(
+				function(event){
+					localStorage.setItem('ciudad', document.getElementById("fciudad").value);
+					window.location.href="listadoPorCiudad.html";
+					
+		});
+		
 		$("#table").on("click", ".editPress", function(event){
 					var id_piso = that.view.getIdPiso($(this));
 					console.log(id_piso);
@@ -85,25 +97,40 @@ function Controller(varmodel,varview) {
             	that.model.IdArray.push(id_piso);
             	console.log(that.model.IdArray);
             }
-		});
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		});		
 }
 			
 };
 
 function View(){
+	
+	this.list = function(lista) {
+		list
+		$("#tblPisos").html("");
+		$("#tblPisos").html( '<thead class="thead-dark">'+
+ 				'<tr>'+
+            	'<th scope="col">ID</th>'+
+           		'<th scope="col">Precio</th>'+
+           		'<th scope="col">Direccion</th>'+
+           		'<th scope="col">Ciudad</th>'+
+           		'<th scope="col">Año</th>'+
+           		'<th scope="col">Estado</th>'+
+        	'</tr>'+
+        	'</thead>'+
+        	'<tbody>');
+		for ( var i in lista) {
+			var piso = lista[i];
+			$("#tblPisos tbody").append("<tr>"+
+						"<td>"+piso.id+"</td>"+  
+   						"<td>"+piso.precio+"</td>"+ 
+   						"<td>"+piso.direccion+"</td>"+  
+   						"<td>"+piso.ciudad+"</td>"+  
+   						"<td>"+piso.ano+"</td>"+ 
+   						"<td>"+piso.estado+"</td>"+  
+   					"</tr>");
+		} 
+	}
+	
 	this.rellenaPisoDelFormulario = function () {
 		var piso= {
 		id:1,
@@ -128,7 +155,7 @@ function View(){
 		$("#editarano").val(pisin.ano);
 		$("#editarestado").val(pisin.estado);
 		$("#editarfoto").val(pisin.foto);
-	        }
+	 }
 	
 	
 	this.getIdPiso = function(celda) {
@@ -145,12 +172,10 @@ function View(){
 $(function() {
 	// Creamos el modelo con los datos y la conexión al servicio web.
 	var model = new Model();
-	
+	model.load();
 	var view = new View();
 	// Creamos el controlador
 	var control = new Controller(model, view);
-	
-	
 	// Iniciamos la aplicación
 	control.init();
 });

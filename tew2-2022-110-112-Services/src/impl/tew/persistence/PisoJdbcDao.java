@@ -48,7 +48,7 @@ public class PisoJdbcDao implements PisoDao{
 				piso.setCiudad(rs.getString("CIUDAD"));
 				piso.setAno(rs.getInt("ANO"));
 				piso.setEstado(rs.getInt("ESTADO"));
-				piso.setCiudad(rs.getString("FOTO"));
+				piso.setFoto(rs.getString("FOTO"));
 				System.out.print(""+piso.getId()+"\t"+piso.getEstado());
 				pisos.add(piso);
 			}
@@ -249,7 +249,7 @@ public class PisoJdbcDao implements PisoDao{
 				piso.setCiudad(rs.getString("CIUDAD"));
 				piso.setAno(rs.getInt("ANO"));
 				piso.setEstado(rs.getInt("ESTADO"));
-				piso.setCiudad(rs.getString("FOTO"));
+				piso.setFoto(rs.getString("FOTO"));
 				
 				System.out.print(piso.getId());
 				
@@ -271,5 +271,6 @@ public class PisoJdbcDao implements PisoDao{
 		}
 		return piso;
 	}
+
 	
 }

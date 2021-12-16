@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ejemplo sencillo de web service con RESTEasy</title>
+<script type="text/javascript"
+	src="http://localhost:8080/tew2-2022-110-112-Services/rest-jsapi"></script>
+
+<!--Uso de hojas de estilo de bootstrap local-->
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+   function solicitarDatosPisos() {
+     var pisos=PisosServicesRs.getPisos();
+     var pisosOrdenados=pisos.sort(function(a,b){
+    	 return a.precio - b.precio;
+     });
+      // Obtener el elemento HTML donde ir dejando el resultado
+      // del servicio
+     table = document.getElementById("tblPisos")
+     table.innerHTML = "";
+     table.innerHTML = '<thead class="thead-dark">'+
+    	 				'<tr>'+
+                        	'<th scope="col">ID</th>'+
+                       		'<th scope="col">Precio</th>'+
+                       		'<th scope="col">Direccion</th>'+
+                       		'<th scope="col">Ciudad</th>'+
+                       		'<th scope="col">Año</th>'+
+                       		'<th scope="col">Estado</th>'+
+                    	'</tr>'+
+                    	'</thead>'+
+                    	'<tbody>';
+     for (i in pisos) {
+       table.innerHTML += "<tr>"+
+       						"<td>"+pisosOrdenados[i]["id"]+"</td>"+
+       						"<td>"+pisosOrdenados[i]["precio"]+"</td>"+ 
+       						"<td>"+pisosOrdenados[i]["direccion"]+"</td>"+  
+       						"<td>"+pisosOrdenados[i]["ciudad"]+"</td>"+  
+       						"<td>"+pisosOrdenados[i]["ano"]+"</td>"+ 
+       						"<td>"+pisosOrdenados[i]["estado"]+"</td>"+  
+       					"</tr>";
+      }
+     table.innerHTML += '</tbody>';
+     
+    }
+  </script>
+<script type="text/javascript">
+	
+</script>
+</head>
+
+<body id="listado" onload="solicitarDatosPisos()">
+	<h1>Listado de pisos</h1>
+	<br/>
+	<div id="contenido" style="height: 90%; top: 30px">
+	<a href="listadoPorPrecioDescendente.html"><button class="btn btn-light">Ordenar por precio descendente</button></a>
+	<table id="tblPisos" class="table">
+	
+	</table>
+	</div>
+	<div class="panel-footer">
+			<ul>
+				<li><a href="#">Contacto</a></li>
+			</ul>
+	</div>
+</body>
+</html>

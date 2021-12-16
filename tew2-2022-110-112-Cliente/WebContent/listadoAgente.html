@@ -2,24 +2,29 @@
 <html>
 <head>
 <title>Ejemplo sencillo de web service con RESTEasy</title>
-<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-
-
-<script
-	src="jquery/Jquery-1.11.3.min.js"></script>
-<script
-	src="bootstrap/js/bootstrap.min.js"></script>
-	<script type="text/javascript"
+<script type="text/javascript"
 	src="http://localhost:8080/tew2-2022-110-112-Services/rest-jsapi"></script>
-<script type="text/javascript" src="javascript/functions_crudPisos.js"></script>
+
+<!--Uso de hojas de estilo de bootstrap local-->
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 <script type="text/javascript">
    function solicitarDatosPisos() {
      var pisos=PisosServicesRs.getPisos();
+     var agente=localStorage.getItem('agente');
       // Obtener el elemento HTML donde ir dejando el resultado
       // del servicio
      table = document.getElementById("table")
      table.innerHTML = "";
+     /*for (i in pisos) {
+       table.innerHTML += pisos[i]["id"] + pisos[i]["precio"] + pisos[i]["direccion"] + pisos[i]["estado"]+"</br>";
+      }*/
      table.innerHTML = '<thead class="thead-dark">'+
     	 				'<tr>'+
                         	'<th scope="col">ID</th>'+
@@ -29,12 +34,12 @@
                        		'<th scope="col">Ciudad</th>'+
                        		'<th scope="col">Año</th>'+
                        		'<th scope="col">Estado</th>'+
-                       		'<th scope="col">Foto</th>'+
                     	'</tr>'+
                     	'</thead>'+
                     	'<tbody>';
      for (i in pisos) {
-       table.innerHTML += "<tr>"+
+    	 if(pisos[i]["idAgente"]==agente){
+       					table.innerHTML += "<tr>"+
        						"<td>"+pisos[i]["id"]+"</td>"+ 
        						"<td>"+pisos[i]["idAgente"]+"</td>"+ 
        						"<td>"+pisos[i]["precio"]+"</td>"+ 
@@ -42,10 +47,10 @@
        						"<td>"+pisos[i]["ciudad"]+"</td>"+  
        						"<td>"+pisos[i]["ano"]+"</td>"+ 
        						"<td>"+pisos[i]["estado"]+"</td>"+ 
-       						'<td><img src="'+pisos[i]["foto"]+'"></td>'+  
-       						'<td><a href="edit.html" id="editPress" class="editPress">Editar</a></td>'+
-       						"<td> <input type='checkbox' class = 'marcar'> </td>"+
+       						'<td><a href="edit.html">Editar</a></td>'+ 
+       						'<td><a href="edit.html">Baja</a></td>'+ 
        					"</tr>";
+    	 }
       }
      table.innerHTML += '</tbody>';
      
@@ -57,18 +62,10 @@
 	<h1>Listado de pisos</h1>
 	<br/>
 	<div id="contenido" style="height: 90%; top: 30px">
-		<a href="listadoPorPrecioAscendente.html"><button
-				class="btn btn-light">Ordenar por precio ascendente</button></a> <a
-			href="listadoPorPrecioDescendente.html"><button
-				class="btn btn-light">Ordenar por precio descendente</button></a> <br>
-
-		<label for="fname">Ciudad:</label> <input type="text" id="fciudad"
-			name="fciudad"><br>
-		<br> <input type="submit" value="Buscar" id="botonCiudad"
-			required class="btn btn-default" />
-		<table id="table" class="table"></table>
-		<button type="button" class="btn btn-default" id="btnBorrar">Borrar
-			seleccion</button>
-	</div>
+	<table id="table" class="table">
+	
+	</table>
+	Resultado del
+		servicio REST...</div>
 </body>
 </html>
