@@ -9,6 +9,10 @@ function Model() {
 	 this.tbPisos = null;
 	 this.nmax = null;
 	 this.nmin = null;
+	 this.arrayMenores=[];
+	 this.arrayMedios=[];
+	 this.arrayMayores=[];
+	 
 	 this.load = function() {
 		this.tbPisos = PisosServicesRs.getPisos();
 	 }
@@ -28,6 +32,27 @@ function Controller(varmodel,varview) {
 	this.init = function() {
 		localStorage.setItem('maximo', Math.max(...this.model.precioArray)*2/3);
 		localStorage.setItem('minimo', Math.min(...this.model.precioArray)/3);
+		$("#btnSalvarFormularioExamen").click(
+				function(event){
+			var umbralInferior=$("#umbralInferior").val();
+			var umbralSuperior=$("#umbralSuperior").val();
+			for(var a in this.tbPisos){
+				if (tbPisos[i]["precio"]<umbralInferior){
+					that.model.arrayMenores.push(tbPisos[i]);
+				}
+				if ((tbPisos[i]["precio"]>umbralInferior)&&(tbPisos[i]["precio"]<umbralSuperior)){
+					that.model.arrayMedios.push(tbPisos[i]);
+				}
+				if (tbPisos[i]["precio"]>umbralSuperior){
+					that.model.arrayMayores.push(tbPisos[i]);
+				}
+			}
+			localStorage.setItem('pisoMenor', arrayMenores);
+			localStorage.setItem('pisoMedio', arrayMedios);
+			localStorage.setItem('pisoMayor', arrayMayores);
+			window.location.href="listadoExamen.html";
+		    
+		});
 	}
 }
 

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ejemplo sencillo de web service con RESTEasy</title>
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+
+<script
+	src="jquery/Jquery-1.11.3.min.js"></script>
+<script
+	src="bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript"
+	src="http://localhost:8080/tew2-2022-110-112-Services/rest-jsapi"></script>
+<script type="text/javascript" src="javascript/functions_crudPisos.js"></script>
+
+<script type="text/javascript">
+   function tablaMenor() {
+     var pisos=localStorage.getItem('pisoMenor')
+      // Obtener el elemento HTML donde ir dejando el resultado
+      // del servicio
+      var pisosEnteros
+     table = document.getElementById("tablaPequeña")
+     table.innerHTML = "";
+     table.innerHTML = '<thead class="thead-dark">'+
+    	 				'<tr>'+
+                        	'<th scope="col">ID</th>'+
+                       		'<th scope="col">Precio</th>'+
+                       		'<th scope="col">Direccion</th>'+
+                       		'<th scope="col">Ciudad</th>'+
+                       		'<th scope="col">Año</th>'+
+                       		'<th scope="col">Estado</th>'+
+                    	'</tr>'+
+                    	'</thead>'+
+                    	'<tbody>';
+     for (i in pisos) {
+       table.innerHTML += "<tr>"+
+       						"<td>"+pisos[i]["id"]+"</td>"+  
+       						"<td>"+pisos[i]["precio"]+"</td>"+ 
+       						"<td>"+pisos[i]["direccion"]+"</td>"+  
+       						"<td>"+pisos[i]["ciudad"]+"</td>"+  
+       						"<td>"+pisos[i]["ano"]+"</td>"+ 
+       						"<td>"+pisos[i]["estado"]+"</td>"+ 
+       					"</tr>";
+      }
+     table.innerHTML += '</tbody>';
+     
+    }
+  </script>
+  
+  <script type="text/javascript">
+   function tablaMedia() {
+	   var pisos=localStorage.getItem('pisoMedio')
+      // Obtener el elemento HTML donde ir dejando el resultado
+      // del servicio
+     table = document.getElementById("tablaMedia")
+     table.innerHTML = "";
+     table.innerHTML = '<thead class="thead-dark">'+
+    	 				'<tr>'+
+                        	'<th scope="col">ID</th>'+
+                       		'<th scope="col">Precio</th>'+
+                       		'<th scope="col">Direccion</th>'+
+                       		'<th scope="col">Ciudad</th>'+
+                       		'<th scope="col">Año</th>'+
+                       		'<th scope="col">Estado</th>'+
+                    	'</tr>'+
+                    	'</thead>'+
+                    	'<tbody>';
+     for (i in pisos) {
+       table.innerHTML += "<tr>"+
+       						"<td>"+pisos[i]["id"]+"</td>"+  
+       						"<td>"+pisos[i]["precio"]+"</td>"+ 
+       						"<td>"+pisos[i]["direccion"]+"</td>"+  
+       						"<td>"+pisos[i]["ciudad"]+"</td>"+  
+       						"<td>"+pisos[i]["ano"]+"</td>"+ 
+       						"<td>"+pisos[i]["estado"]+"</td>"+ 
+       					"</tr>";
+      }
+     table.innerHTML += '</tbody>';
+     
+    }
+  </script>
+  
+  
+  <script type="text/javascript">
+   function tablaMayor() {
+	   var pisos=localStorage.getItem('pisoMayor')
+      // Obtener el elemento HTML donde ir dejando el resultado
+      // del servicio
+     table = document.getElementById("tablaGrande")
+     table.innerHTML = "";
+     table.innerHTML = '<thead class="thead-dark">'+
+    	 				'<tr>'+
+                        	'<th scope="col">ID</th>'+
+                       		'<th scope="col">Precio</th>'+
+                       		'<th scope="col">Direccion</th>'+
+                       		'<th scope="col">Ciudad</th>'+
+                       		'<th scope="col">Año</th>'+
+                       		'<th scope="col">Estado</th>'+
+                    	'</tr>'+
+                    	'</thead>'+
+                    	'<tbody>';
+     for (i in pisos) {
+       table.innerHTML += "<tr>"+
+       						"<td>"+pisos[i]["id"]+"</td>"+  
+       						"<td>"+pisos[i]["precio"]+"</td>"+ 
+       						"<td>"+pisos[i]["direccion"]+"</td>"+  
+       						"<td>"+pisos[i]["ciudad"]+"</td>"+  
+       						"<td>"+pisos[i]["ano"]+"</td>"+ 
+       						"<td>"+pisos[i]["estado"]+"</td>"+ 
+       					"</tr>";
+      }
+     table.innerHTML += '</tbody>';
+     
+    }
+  </script>
+</head>
+
+<body onload="solicitarDatosPisos()">
+	<h1>Listado de pisos dividido en 3 tablas</h1>
+	<br/>
+	<div>
+		<table id="tablaPequeña" class="table"></table>
+		<table id="tablaMedia" class="table"></table>
+		<table id="tablaGrande" class="table"></table>
+	</div>
+</body>
+</html>
