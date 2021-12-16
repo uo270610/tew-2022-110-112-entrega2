@@ -22,8 +22,9 @@ public interface PisosServicesRs extends PisoService{
 	@Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
 	Piso findById(@PathParam("id") Long id) throws NotPersistedException;
 
-	@DELETE
+	@POST
 	@Path("{id}")
+	@Consumes({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
 	void deletePiso(@PathParam("id") Long id) throws NotPersistedException;
 
 	@PUT

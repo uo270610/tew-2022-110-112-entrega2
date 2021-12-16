@@ -180,12 +180,12 @@ public class PisoJdbcDao implements PisoDao{
 			ps = con.prepareStatement("DELETE FROM PISOS WHERE ID=?");
 			ps.setLong(1, idp);
 			ps.executeUpdate();
-			psaux = con.prepareStatement("SELECT * FROM PISOS_PARA_VISITAR WHERE ID_PISO=?");
-			psaux.setLong(1, idp);
-			r = psaux.executeQuery();
+			//psaux = con.prepareStatement("SELECT * FROM PISOS_PARA_VISITAR WHERE ID_PISO=?");
+			//psaux.setLong(1, idp);
+			//r = psaux.executeQuery();
 			
 
-			if(r!=null) {
+			/*if(r!=null) {
 				psaux.close();
 				psaux = con.prepareStatement("DELETE FROM PISOS_PARA_VISITAR WHERE ID=?");
 				psaux.setLong(1, idp);
@@ -200,6 +200,7 @@ public class PisoJdbcDao implements PisoDao{
 			if (rows != 1) {
 				throw new NotPersistedException("Piso " + idp + " not found");
 			} 
+			*/
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 			throw new PersistenceException("Driver not found", e);
