@@ -84,7 +84,7 @@ function Controller(varmodel,varview) {
 						
 					}
 					
-					window.location.href="listado.html";
+					window.location.href="listadoAgente.html";
 
 		});
 		
@@ -105,7 +105,6 @@ function Controller(varmodel,varview) {
 function View(){
 	
 	this.list = function(lista) {
-		list
 		$("#tblPisos").html("");
 		$("#tblPisos").html( '<thead class="thead-dark">'+
  				'<tr>'+

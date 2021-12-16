@@ -23,28 +23,22 @@
      table.innerHTML = '<thead class="thead-dark">'+
     	 				'<tr>'+
                         	'<th scope="col">ID</th>'+
-                       		'<th scope="col">IDAgente</th>'+
                        		'<th scope="col">Precio</th>'+
                        		'<th scope="col">Direccion</th>'+
                        		'<th scope="col">Ciudad</th>'+
                        		'<th scope="col">Año</th>'+
                        		'<th scope="col">Estado</th>'+
-                       		'<th scope="col">Foto</th>'+
                     	'</tr>'+
                     	'</thead>'+
                     	'<tbody>';
      for (i in pisos) {
        table.innerHTML += "<tr>"+
-       						"<td>"+pisos[i]["id"]+"</td>"+ 
-       						"<td>"+pisos[i]["idAgente"]+"</td>"+ 
+       						"<td>"+pisos[i]["id"]+"</td>"+  
        						"<td>"+pisos[i]["precio"]+"</td>"+ 
        						"<td>"+pisos[i]["direccion"]+"</td>"+  
        						"<td>"+pisos[i]["ciudad"]+"</td>"+  
        						"<td>"+pisos[i]["ano"]+"</td>"+ 
        						"<td>"+pisos[i]["estado"]+"</td>"+ 
-       						'<td><img src="'+pisos[i]["foto"]+'"></td>'+  
-       						'<td><a href="edit.html" id="editPress" class="editPress">Editar</a></td>'+
-       						"<td> <input type='checkbox' class = 'marcar'> </td>"+
        					"</tr>";
       }
      table.innerHTML += '</tbody>';
@@ -67,8 +61,6 @@
 		<br> <input type="submit" value="Buscar" id="botonCiudad"
 			required class="btn btn-default" />
 		<table id="table" class="table"></table>
-		<button type="button" class="btn btn-default" id="btnBorrar">Borrar
-			seleccion</button>
 	</div>
 </body>
 </html>
